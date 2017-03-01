@@ -11,7 +11,7 @@
       <!--navigation bar-->
       <SearchBar x:Name="searchBar" BackgroundColor="{StaticResource BBackgroundColor}"
                  HeightRequest="50" Margin="-20,-10,-20,0"
-                 Placeholder="Buscar" PlaceholderColor="Gray" 
+                 Placeholder="Search" PlaceholderColor="Gray" 
                  HorizontalOptions="FillAndExpand" VerticalOptions="Start"  />
 
       <Label Text="Not available" VerticalOptions="Center" HorizontalOptions="Center" />
