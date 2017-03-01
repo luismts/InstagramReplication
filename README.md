@@ -7,6 +7,16 @@ Instagram is a simple way to capture and share the best moments in the world. Fo
 
 (**Android**) Read more [here](https://play.google.com/store/apps/details?id=com.instagram.android&hl=es_419).
 
+## Screenshots
+
+<p aling="center">
+<img src="https://github.com/luismts/InstagramReplication/blob/master/Screenshots/InstagramReplication_home.png" width="30%" /> <img src="https://github.com/luismts/InstagramReplication/blob/master/Screenshots/InstagramReplication_search.png" width="30%" /> 
+<img src="https://github.com/luismts/InstagramReplication/blob/master/Screenshots/InstagramReplication_likes.png" width="30%" /> <img src="https://github.com/luismts/InstagramReplication/blob/master/Screenshots/InstagramReplication_profileGrid.png" width="30%" /> 
+<img src="https://github.com/luismts/InstagramReplication/blob/master/Screenshots/InstagramReplication_profileList.png" width="30%" /> <img src="https://github.com/luismts/InstagramReplication/blob/master/Screenshots/InstagramReplication_otherPhotos.png" width="30%" /> 
+<img src="https://github.com/luismts/InstagramReplication/blob/master/Screenshots/InstagramReplication_options.png" width="30%" /> <img src="https://github.com/luismts/InstagramReplication/blob/master/Screenshots/InstagramReplication_dm.png" width="30%" /> 
+<img src="https://github.com/luismts/InstagramReplication/blob/master/Screenshots/InstagramReplication_describePeople.png" width="30%" />
+</p>
+
 ## Components used with xamarin
 
 - [BottomNavigationBar](https://github.com/pocheshire/BottomNavigationBar): A custom view component that mimics the new material design bottom navigation pattern.
