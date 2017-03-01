@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             x:Class="InstagramReplication.Views.PhotoGridView">
+    
+  <ContentView.Content>
+        <!--Posts-->
+        <flv:FlowListView  FlowItemsSource="{Binding InstagramItems}" FlowColumnCount="3" 
+                           HasUnevenRows="True"  SeparatorVisibility="None"  Margin="0,0,-2,0"  >
+            
+            <flv:FlowListView.FlowColumnTemplate>
+                <DataTemplate>
+
+                    <!--IMG-->
+                    <Image Source = "{Binding StandardResolutionUrl}" HeightRequest="120" Margin="0,0,2,1" HorizontalOptions="FillAndExpand"/>
+                        
+                </DataTemplate>
+            </flv:FlowListView.FlowColumnTemplate>
+        </flv:FlowListView>
+    </ContentView.Content>
+    
+</ContentView>

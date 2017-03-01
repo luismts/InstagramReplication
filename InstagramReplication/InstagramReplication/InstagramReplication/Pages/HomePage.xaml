@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InstagramReplication.Pages.HomePage"
+             Icon="ic_action_home.png"
+             BindingContext="{Binding Home, Source={StaticResource Locator}}">
+
+
+  <StackLayout Padding = "10,0,10,0" BackgroundColor="White">
+
+    <!--Navigation bar-->
+    <StackLayout Orientation = "Horizontal"  Padding="20,10,10,10" View.Margin="-10,0,-10,0" HeightRequest="29"
+                 BackgroundColor="{StaticResource BBackgroundColor}"  HorizontalOptions="FillAndExpand"  >
+      <!--logo-->
+      <Image Source="ig_logotype.png" WidthRequest="90" HeightRequest="100"
+             VerticalOptions="Start" HorizontalOptions="StartAndExpand" />
+      <!--dm-->
+      <Image Source="ic_action_direct.png"  WidthRequest="25" HeightRequest="25" 
+             VerticalOptions="Start" HorizontalOptions="EndAndExpand">
+        <Image.GestureRecognizers>
+          <TapGestureRecognizer Command="{Binding GoToCommand}"></TapGestureRecognizer>
+        </Image.GestureRecognizers>
+      </Image>
+      
+    </StackLayout>
+
+    <!--Posts-->
+    <ListView ItemsSource = "{Binding InstagramItems}" HasUnevenRows="True"  SeparatorVisibility="None"  >
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+
+            <StackLayout View.Margin="0,0,0,10">
+              
+              <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer ></TapGestureRecognizer>
+              </StackLayout.GestureRecognizers>
+              
+              <!--PROFILE BAR-->
+              <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand" Padding="0,10,0,10" >
+                <!--img-->
+                <Image Source="{Binding ProfilePicture}"
+                        WidthRequest="25" HeightRequest="25" VerticalOptions="Start"/>
+                
+                <!--inf-->  
+                <StackLayout Orientation="Vertical" >
+                  <Label Text="{Binding UserName}" TextColor="#212121" FontAttributes="Bold" FontSize="16"/>
+                </StackLayout>
+              
+                 <!--menu-->
+                <Image Source="menu.png"
+                       WidthRequest="4" HeightRequest="4" HorizontalOptions="EndAndExpand"/>
+              </StackLayout>
+              
+              <BoxView Color="{StaticResource DivitionLineColor}" 
+                       HeightRequest="0.5" Margin="-20,0,-20,0" 
+                       HorizontalOptions="FillAndExpand" VerticalOptions="Start" />
+              
+              <!--IMG-->
+              <Image Source = "{Binding StandardResolutionUrl}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+              
+              <!--buttons-->  
+              <StackLayout Orientation="Horizontal">
+                <Image Source="heart.png" WidthRequest="27" HeightRequest="27" Margin="0,0,10,0" />
+                <Image Source="bubble.png" WidthRequest="23" HeightRequest="23" Margin="0,0,10,0" />
+                <Image Source="arrow.png" WidthRequest="23" HeightRequest="23" Margin="0,0,10,0"/>
+              </StackLayout>
+              
+              <BoxView Color="{StaticResource DivitionLineColor}" 
+                       HeightRequest="0.5" Margin="-20,0,-20,0" 
+                       HorizontalOptions="FillAndExpand" VerticalOptions="Start" />
+              
+              <!--likes-->
+              <StackLayout Orientation="Horizontal" >
+                <Image Source="mini_heart.png" WidthRequest="12" HeightRequest="12"/>
+                <Label Text="{Binding LikesCount, StringFormat='{0:n0} likes'}"
+                       TextColor="Black" FontAttributes="Bold" FontSize="14"/>
+              </StackLayout>
+              <!--desc-->
+              <StackLayout >
+                <Label Text="{Binding UserName}" TextColor="Black" FontAttributes="Bold"  FontSize="14"/>
+                <Label Text = "{Binding Text}" TextColor="Black" FontSize="14"/>
+              </StackLayout>
+              <!--comments-->
+              <Label Text = "{Binding CommentsCount, StringFormat='View the {0:n0} comments'}"
+                     TextColor="Gray" FontSize="14"/>
+              <!--created time-->
+              <!--Label Text = "{Binding CreatedTime , StringFormat='{0:dd} days ago'}}"
+                     TextColor="Gray" FontSize="14"/-->
+            </StackLayout>
+            
+
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+  
+</ContentPage>

@@ -1,0 +1,547 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BottomNavigationBar</name>
+    </assembly>
+    <members>
+        <member name="M:BottomNavigationBar.Scrollswetness.VerticalScrollingBehavior`1.GetOverScrollDirection">
+             <summary>
+             Gets the over scroll direction.
+             </summary>
+             <returns>SCROLL_DIRECTION_UP, CROLL_DIRECTION_DOWN, SCROLL_NONE</returns>
+            </member>
+        <member name="M:BottomNavigationBar.Scrollswetness.VerticalScrollingBehavior`1.GetScrollDirection">
+             <summary>
+             Gets the scroll direction.
+             </summary>
+             <returns>SCROLL_DIRECTION_UP, SCROLL_DIRECTION_DOWN, SCROLL_NONE</returns>
+            </member>
+        <!--FIXME: Invalid documentation markup was found for member M:BottomNavigationBar.Scrollswetness.VerticalScrollingBehavior`1.onNestedVerticalOverScroll(Android.Support.Design.Widget.CoordinatorLayout,`0,BottomNavigationBar.Scrollswetness.ScrollDirection,System.Int32,System.Int32)-->
+        <member name="M:BottomNavigationBar.Scrollswetness.VerticalScrollingBehavior`1.onDirectionNestedPreScroll(Android.Support.Design.Widget.CoordinatorLayout,`0,Android.Views.View,System.Int32,System.Int32,System.Int32[],BottomNavigationBar.Scrollswetness.ScrollDirection)">
+             <summary>
+             Ons the direction nested pre scroll.
+             </summary>
+             <param name="scrollDirection">Direction of the overscroll: SCROLL_DIRECTION_UP, SCROLL_DIRECTION_DOWN</param>
+            </member>
+        <member name="P:BottomNavigationBar.BottomBarBadge.Count">
+             <summary>
+             Gets or sets the unread / new item / whatever count for this Badge.
+             </summary>
+             <value>the value this Badge should show</value>
+            </member>
+        <member name="P:BottomNavigationBar.BottomBarBadge.AutoShowAfterUnSelection">
+             <summary>
+             Controls whether you want this Badge to be shown automatically when the BottomBar tab containing it is unselected.
+             un selection.
+             </summary>
+             <value><c>true</c>, if this Badge is automatically shown after unselection, otherwise <c>false</c>.</value>
+            </member>
+        <member name="P:BottomNavigationBar.BottomBarBadge.AnimationDuration">
+             <summary>
+             Gets or sets the scale animation duration in milliseconds.
+             </summary>
+             <value>animation duration in milliseconds.</value>
+            </member>
+        <member name="P:BottomNavigationBar.BottomBarBadge.IsVisible">
+             <summary>
+             Is this badge currently visible?
+             </summary>
+             <returns><c>true</c>, is this badge is visible, <c>false</c> otherwise.</returns>
+            </member>
+        <member name="P:BottomNavigationBar.BottomBarBadge.AutoHideWhenSelection">
+             <summary>
+             Controls whether you want this Badge to be hidden automatically when the BottomBar tab containing it is selected.
+             </summary>
+             <value><c>false</c> false if you don't want this Badge to hide every time the BottomBar tab containing it is selected; otherwise, <c>true</c>.</value>
+            </member>
+        <member name="P:BottomNavigationBar.BottomBarBadge.Position">
+             <summary>
+             Gets or sets the position of badge in tab.
+             </summary>
+             <value>Left or Right (default – Right)</value>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBarBadge.Show">
+             <summary>
+             Shows the badge with a neat little scale animation.
+             </summary>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBarBadge.Hide">
+             <summary>
+             Hides the badge with a neat little scale animation.
+             </summary>
+            </member>
+        <member name="M:BottomNavigationBar.MiscUtils.DpToPixel(Android.Content.Context,System.Single)">
+             <summary>
+             Converts dps to pixels nicely.
+             </summary>
+             <returns>dimension in pixels</returns>
+             <param name="context">Context for getting the resources</param>
+             <param name="dp">dimension in dps</param>
+            </member>
+        <member name="M:BottomNavigationBar.MiscUtils.GetScreenWidth(Android.Content.Context)">
+             <summary>
+             Gets the width of the screen.
+             </summary>
+             <returns>The screen width.</returns>
+             <param name="context">Context to get resources and device specific display metrics.</param>
+            </member>
+        <member name="M:BottomNavigationBar.MiscUtils.InflateMenuFromResource(Android.App.Activity,System.Int32)">
+             <summary>
+             A hacky method for inflating menus from xml resources to an array of BottomBarTabs.
+             </summary>
+             <returns>an Array of BottomBarTabs.</returns>
+             <param name="activity">the activity context for retrieving the MenuInflater.</param>
+             <param name="menuRes">the xml menu resource to inflate.</param>
+            </member>
+        <member name="M:BottomNavigationBar.MiscUtils.AnimateBGColorChange(Android.Views.View,Android.Views.View,Android.Views.View,System.Int32)">
+             <summary>
+             Animate a background color change. Uses Circular Reveal if supported, otherwise crossfades the background color in.
+             </summary>
+             <param name="clickedView">the view that was clicked for calculating the start position for the Circular Reveal.</param>
+             <param name="backgroundView">the currently showing background color.</param>
+             <param name="bgOverlay">the overlay view for the new background color that will be animated in.</param>
+             <param name="newColor">the new color.</param>
+            </member>
+        <member name="M:BottomNavigationBar.MiscUtils.SetTextAppearance(Android.Widget.TextView,System.Int32)">
+             <summary>
+             A convenience method for setting text appearance.
+             </summary>
+             <param name="textView">TextView which textAppearance to modify.</param>
+             <param name="resId">style resource for the text appearance.</param>
+            </member>
+        <member name="M:BottomNavigationBar.MiscUtils.IsNightMode(Android.Content.Context)">
+             <summary>
+             Determine if the current UI Mode is Night Mode.
+             </summary>
+             <returns><c>true</c>, if the night mode is enabled, <c>false</c> otherwise.</returns>
+             <param name="context">Context to get the configuration.</param>
+            </member>
+        <member name="M:BottomNavigationBar.MiscUtils.ResizeTab(Android.Views.View,System.Single,System.Single)">
+             <summary>
+             A method for animating width for the tabs.
+             </summary>
+             <param name="tab">tab to animate.</param>
+             <param name="start">starting width.</param>
+             <param name="end">final width after animation.</param>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBarTab.#ctor(System.Int32,System.String)">
+             <summary>
+             Creates a new Tab for the BottomBar
+             </summary>
+             <param name="iconResource">a resource for the Tab icon.</param>
+             <param name="title">title for the Tab.</param>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBarTab.#ctor(Android.Graphics.Drawables.Drawable,System.String)">
+             <summary>
+             Creates a new Tab for the BottomBar.
+             </summary>
+             <param name="icon">an icon for the Tab.</param>
+             <param name="title">title title for the Tab.</param>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBarTab.#ctor(Android.Graphics.Drawables.Drawable,System.Int32)">
+             <summary>
+             Creates a new Tab for the BottomBar.
+             </summary>
+             <param name="icon">an icon for the Tab.</param>
+             <param name="titleResource">resource for the title.</param>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBarTab.#ctor(System.Int32,System.Int32)">
+             <summary>
+             Creates a new Tab for the BottomBar.
+             </summary>
+             <param name="iconResource">a resource for the Tab icon.</param>
+             <param name="titleResource">resource for the title.</param>
+            </member>
+        <member name="M:BottomNavigationBar.Listeners.IOnMenuTabSelectedListener.OnMenuItemSelected(System.Int32)">
+             <summary>
+             The method being called when currently visible <see cref="T:BottomNavigationBar.BottomBarTab" /> changes.
+             This listener won't be fired until the user changes the selected item the
+             first time. So you won't get this event when you're just initialized the BottomBar.
+             </summary>
+             <param name="menuItemId">the new visible tab's id that was assigned in the menu xml resource file.</param>
+            </member>
+        <member name="M:BottomNavigationBar.Listeners.IOnTabSelectedListener.OnItemSelected(System.Int32)">
+             <summary>
+             The method being called when currently visible <see cref="T:BottomNavigationBar.BottomBarTab" /> changes.
+             This listener won't be fired until the user changes the selected item the
+             first time. So you won't get this event when you're just initialized the BottomBar.
+             </summary>
+             <param name="position">position the new visible <see cref="T:BottomNavigationBar.BottomBarTab" />.</param>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBarFragment.#ctor(Android.App.Fragment,System.Int32,System.String)">
+             <summary>
+             Creates a new Tab for the BottomBar.
+             </summary>
+             <param name="fragment">a Fragment to be shown when this Tab is selected.</param>
+             <param name="iconResource"> a resource for the Tab icon.</param>
+             <param name="title">title for the Tab.</param>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBarFragment.#ctor(Android.App.Fragment,Android.Graphics.Drawables.Drawable,System.String)">
+             <summary>
+             Creates a new Tab for the BottomBar.
+             </summary>
+             <param name="fragment"> a Fragment to be shown when this Tab is selected.</param>
+             <param name="icon">an icon for the Tab.</param>
+             <param name="title">title for the Tab.</param>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBarFragment.#ctor(Android.App.Fragment,Android.Graphics.Drawables.Drawable,System.Int32)">
+             <summary>
+             Creates a new Tab for the BottomBar.
+             </summary>
+             <param name="fragment"> a Fragment to be shown when this Tab is selected.</param>
+             <param name="icon"> an icon for the Tab.</param>
+             <param name="titleResource">resource for the title.</param>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBarFragment.#ctor(Android.App.Fragment,System.Int32,System.Int32)">
+             <summary>
+             Creates a new Tab for the BottomBar.
+             </summary>
+             <param name="fragment"> a Fragment to be shown when this Tab is selected.</param>
+             <param name="iconResource"> a resource for the Tab icon.</param>
+             <param name="titleResource"> resource for the title.</param>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBarFragment.#ctor(Android.Support.V4.App.Fragment,System.Int32,System.String)">
+             <summary>
+             Creates a new Tab for the BottomBar.
+             </summary>
+             <param name="fragment"> a Fragment to be shown when this Tab is selected.</param>
+             <param name="iconResource">a resource for the Tab icon.</param>
+             <param name="title"> title for the Tab.</param>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBarFragment.#ctor(Android.Support.V4.App.Fragment,Android.Graphics.Drawables.Drawable,System.String)">
+             <summary>
+             Creates a new Tab for the BottomBar.
+             </summary>
+             <param name="fragment"> a Fragment to be shown when this Tab is selected.</param>
+             <param name="icon"> an icon for the Tab.</param>
+             <param name="title"> title for the Tab.</param>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBarFragment.#ctor(Android.Support.V4.App.Fragment,Android.Graphics.Drawables.Drawable,System.Int32)">
+             <summary>
+             Creates a new Tab for the BottomBar.
+             </summary>
+             <param name="fragment">a Fragment to be shown when this Tab is selected.</param>
+             <param name="icon">an icon for the Tab.</param>
+             <param name="titleResource">resource for the title.</param>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBarFragment.#ctor(Android.Support.V4.App.Fragment,System.Int32,System.Int32)">
+             <summary>
+             Creates a new Tab for the BottomBar.
+             </summary>
+             <param name="fragment">a Fragment to be shown when this Tab is selected.</param>
+             <param name="iconResource">a resource for the Tab icon.</param>
+             <param name="titleResource">resource for the title.</param>
+            </member>
+        <member name="P:BottomNavigationBar.BottomBar.OuterContainer">
+             <summary>
+             Get the actual BottomBar that has the tabs inside it for whatever what you may want
+             to do with it.
+             </summary>
+             <value>The BottomBar</value>
+            </member>
+        <member name="P:BottomNavigationBar.BottomBar.CurrentTabPosition">
+             <summary>
+             Gets the current tab position.
+             </summary>
+             <value>the position of currently selected tab.</value>
+            </member>
+        <member name="P:BottomNavigationBar.BottomBar.MaxFixedTabCount">
+             <summary>
+             Set the maximum number of tabs, after which the tabs should be shifting ones with a background color.
+             NOTE: You must call this method before setting any items.
+             </summary>
+             <value>count maximum number of fixed tabs.</value>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBar.Attach(Android.App.Activity,Android.OS.Bundle)">
+             <summary>
+             Bind the BottomBar to your Activity, and inflate your layout here.
+             Remember to also call <seealso cref="M:BottomNavigationBar.BottomBar.OnSaveInstanceState(Android.OS.Bundle)" /> inside
+             of your <seealso cref="M:Android.App.Activity.OnSaveInstanceState(Android.OS.Bundle)" /> to restore the state.
+             </summary>
+             <param name="activity">an Activity to attach to.</param>
+             <param name="savedInstanceState">a Bundle for restoring the state on configuration change.</param>
+             <returns>a BottomBar at the bottom of the screen.</returns>
+            </member>
+        <!--FIXME: Invalid documentation markup was found for member M:BottomNavigationBar.BottomBar.Attach(Android.Views.View,Android.OS.Bundle)-->
+        <member name="M:BottomNavigationBar.BottomBar.AttachShy(Android.Support.Design.Widget.CoordinatorLayout,Android.OS.Bundle)">
+             <summary>
+             Deprecated. Breaks support for tablets.
+             Use <seealso cref="!:attachShy(CoordinatorLayout, View, Bundle)" /> instead.
+             </summary>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBar.AttachShy(Android.Support.Design.Widget.CoordinatorLayout,Android.Views.View,Android.OS.Bundle)">
+             <summary>
+             Adds the BottomBar inside of your CoordinatorLayout and shows / hides it according to scroll state changes.
+             Remember to also call <seealso cref="M:BottomNavigationBar.BottomBar.OnRestoreInstanceState(Android.OS.Bundle)" /> inside
+             of your <seealso cref="M:Android.App.Activity.OnRestoreInstanceState(Android.OS.Bundle)" /> to restore the state.
+             </summary>
+             <returns>The shy.</returns>
+             <param name="coordinatorLayout">a CoordinatorLayout for the BottomBar to add itself into.</param>
+             <param name="userContentView">the view (usually a NestedScrollView) that has your scrolling content. Needed for tablet support.</param>
+             <param name="savedInstanceState">a Bundle for restoring the state on configuration change.</param>
+             <returns>a BottomBar at the bottom of the screen.</returns>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBar.SetFragmentItems(Android.App.FragmentManager,System.Int32,BottomNavigationBar.BottomBarFragment[])">
+             <summary>
+             Deprecated
+             
+             Use either <see cref="!:SetItems(BottomBarTab...)" /> or
+             <see cref="M:BottomNavigationBar.BottomBar.SetItemsFromMenu(System.Int32,BottomNavigationBar.Listeners.IOnMenuTabClickListener)" /> and add a listener using
+             <see cref="!:SetOnTabClickListener(IOnTabClickListener) to handle tab changes by yourself." />
+             </summary>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBar.SetFragmentItems(Android.Support.V4.App.FragmentManager,System.Int32,BottomNavigationBar.BottomBarFragment[])">
+             <summary>
+             Deprecated
+             
+             Use either <see cref="!:SetItems(BottomBarTab...)" /> or
+             <see cref="M:BottomNavigationBar.BottomBar.SetItemsFromMenu(System.Int32,BottomNavigationBar.Listeners.IOnMenuTabClickListener)" /> and add a listener using
+             <see cref="!:SetOnTabClickListener(IOnTabClickListener) to handle tab changes by yourself." />
+             </summary>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBar.SetItems(BottomNavigationBar.BottomBarTab[])">
+             <summary>
+             Set tabs and fragments for this BottomBar. When setting more than 3 items,
+             only the icons will show by default, but the selected item will have the text visible.
+             </summary>
+             <param name="bottomBarTabs">an array of <see cref="T:BottomNavigationBar.BottomBarTab" /> objects.</param>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBar.SetItems(System.Int32)">
+             <summary>
+             Set items for this BottomBar from an XML menu resource file.
+             When setting more than 3 items, only the icons will show by
+             default, but the selected item will have the text visible.
+             </summary>
+             <param name="menuRes">the menu resource to inflate items from.</param>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBar.SetItemsFromMenu(System.Int32,BottomNavigationBar.Listeners.IOnMenuTabSelectedListener)">
+             <summary>
+             Deprecated, use <see cref="!:SetItems(int menuRes)" /> and <see cref="!:SetOnMenuTabClickListener(IOnMenuTabClickListener listener)" /> instead
+             </summary>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBar.SetItemsFromMenu(System.Int32,BottomNavigationBar.Listeners.IOnMenuTabClickListener)">
+             <summary>
+             Deprecated, use <see cref="!:SetItems(int menuRes)" /> and <see cref="!:SetOnMenuTabClickListener(IOnMenuTabClickListener listener)" /> instead
+             </summary>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBar.SetOnItemSelectedListener(BottomNavigationBar.Listeners.IOnTabSelectedListener)">
+             <summary>
+             Deprecated, use <see cref="!:SetOnItemSelectedListener(IOnTabClickListener listener)" /> instead
+             </summary>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBar.SetOnTabClickListener(BottomNavigationBar.Listeners.IOnTabClickListener)">
+             <summary>
+             Set a listener that gets fired when the selected tab changes.
+             Note: If listener is set after items are added to the BottomBar, OnTabSelected 
+             will be immediately called for the currently selected tab
+             </summary>
+             <param name="listener">a listener for monitoring changes in tab selection.</param>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBar.SelectTabAtPosition(System.Int32,System.Boolean)">
+             <summary>
+             Select a tab at the specified position.
+             </summary>
+             <param name="position">the position to select.</param>
+             <param name="animate">If set to <c>true</c> animate.</param>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBar.SetDefaultTabPosition(System.Int32)">
+             <summary>
+             Sets the default tab for this BottomBar that is shown until the user changes
+             the selection.
+             </summary>
+             <param name="defaultTabPosition">the default tab position.</param>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBar.Hide(System.Boolean)">
+             <summary>
+             Hide the BottomBar with or without animation.
+             </summary>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBar.Show(System.Boolean)">
+             <summary>
+             Show the BottomBar with or without animation.
+             </summary>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBar.UseFixedMode">
+             <summary>
+             Always show the titles and icons also on inactive tabs, even if there's more than three of them.
+             </summary>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBar.OnSaveInstanceState(Android.OS.Bundle)">
+             <summary>
+             Call this method in your Activity's onSaveInstanceState to keep the BottomBar's state on configuration change.
+             </summary>
+             <param name="outState">the Bundle to save data to.</param>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBar.MapColorForTab(System.Int32,Android.Graphics.Color)">
+             <summary>
+             Map a background color for a Tab, that changes the whole BottomBar background color when the Tab is selected.
+             </summary>
+             <param name="tabPosition">zero-based index for the tab.</param>
+             <param name="color">a hex color for the tab, such as 0xFF00FF00.</param>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBar.MapColorForTab(System.Int32,System.String)">
+             <summary>
+             Map a background color for a Tab, that changes the whole BottomBar background color when the Tab is selected.
+             </summary>
+             <param name="tabPosition">zero-based index for the tab.</param>
+             <param name="color">a hex color for the tab, such as "#00FF000".</param>
+            </member>
+        <!--FIXME: Invalid documentation markup was found for member M:BottomNavigationBar.BottomBar.UseDarkTheme(System.Boolean)-->
+        <member name="M:BottomNavigationBar.BottomBar.UseDarkThemeWithAlpha(System.Boolean)">
+             <summary>
+             Apply the dark theme
+             </summary>
+             <param name="useDarkThemeAlpha">If set to <c>true</c> change alpha for icon and title when tab unselected.</param>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBar.IgnoreNightMode">
+             <summary>
+             Ignore the automatic Night Mode detection and use a light theme by default,
+             even if the Night Mode is on.
+             </summary>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBar.SetActiveTabColor(System.String)">
+             <summary>
+             Set a custom color for an active tab when there's three or less items.
+             NOTE: This value is ignored on mobile devices if you have more than three items.
+             </summary>
+             <param name="activeTabColor">a hex color used for active tabs, such as "#00FF000".</param>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBar.SetActiveTabColor(Android.Graphics.Color)">
+             <summary>
+             Set a custom color for an active tab when there's three or less items.
+             NOTE: This value is ignored on mobile devices if you have more than three items.
+             </summary>
+             <param name="activeTabColor">a hex color used for active tabs, such as "#00FF000".</param>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBar.MakeBadgeForTabAt(System.Int32,System.String,System.Int32)">
+             <summary>
+             Creates a new Badge (for example, an indicator for unread messages) for a Tab at the specified position.
+             </summary>
+             <returns>The <see cref="!:BottomBar.BottomBarBadge" /> object.</returns>
+             <param name="tabPosition">zero-based index for the tab.</param>
+             <param name="backgroundColor">a color for this badge, such as "#FF0000".</param>
+             <param name="initialCount">text displayed initially for this Badge.</param>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBar.MakeBadgeForTabAt(System.Int32,Android.Graphics.Color,System.Int32)">
+             <summary>
+             Creates a new Badge (for example, an indicator for unread messages) for a Tab at the specified position.
+             </summary>
+             <returns>The <see cref="!:BottomBar.BottomBarBadge" /> object.</returns>
+             <param name="tabPosition">zero-based index for the tab.</param>
+             <param name="backgroundColor">a color for this badge, such as "#FF0000".</param>
+             <param name="initialCount">text displayed initially for this Badge.</param>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBar.RemoveBadgeAt(System.Int32)">
+             <summary>
+             Removes the badge at tabPosition.
+             </summary>
+             <param name="tabPosition">Tab position.</param>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBar.SetTypeFace(System.String)">
+             <summary>
+             Set a custom TypeFace for the tab titles. The .ttf file should be located at "/src/main/assets".
+             </summary>
+             <param name="typeFacePath">path for the custom typeface in the assets directory.</param>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBar.SetTypeFace(Android.Graphics.Typeface)">
+             <summary>
+             Set a custom TypeFace for the tab titles. The .ttf file should be located at "/src/main/assets".
+             </summary>
+             <param name="typeface">custom typeface in the assets directory.</param>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBar.SetTextAppearance(System.Int32)">
+             <summary>
+             Set a custom text appearance for the tab title.
+             </summary>
+             <param name="resId">path to the custom text appearance.</param>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBar.HideShadow">
+             <summary>
+             Hide the shadow that's normally above the BottomBar.
+             </summary>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBar.NoNavBarGoodness">
+             <summary>
+             Prevent the BottomBar drawing behind the Navigation Bar and making it transparent. 
+             Must be called before setting items.
+             </summary>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBar.NoTabletGoodness">
+             <summary>
+             Force the BottomBar to behave exactly same on tablets and phones,
+             instead of showing a left menu on tablets.
+             </summary>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBar.GetBarSize(BottomNavigationBar.Listeners.IOnSizeDeterminedListener)">
+             <summary>
+             Get this BottomBar's height (or width), depending if the BottomBar
+             is on the bottom (phones) or the left (tablets) of the screen.
+             </summary>
+             <param name="listener">listener <see cref="T:BottomNavigationBar.Listeners.IOnSizeDeterminedListener" /> to get the size when it's ready.</param>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBar.NoTopOffset">
+             <summary>
+             If you get some unwanted extra padding in the top (such as when using CoordinatorLayout), this fixes it.
+             </summary>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBar.UseOnlyStatusBarTopOffset">
+             <summary>
+             If your ActionBar gets inside the status bar for some reason, this fixes it.
+             </summary>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBar.ToughChildHood(System.Boolean)">
+             <summary>
+             Makes this BottomBar "shy". In other words, it hides on scroll.
+             </summary>
+             <param name="useExtraOffsets">Use extra offset.</param>
+            </member>
+        <member name="M:BottomNavigationBar.BottomBar.UpdateTitleBottomPadding">
+             <summary>
+             Material Design specify that there should be a 10dp padding under the text, it seems that
+             it means 10dp starting from the text baseline.
+             This method takes care of calculating the amount of padding that needs to be added to the
+             Title TextView in order to comply with the Material Design specifications.
+             </summary>
+            </member>
+        <member name="M:BottomNavigationBar.Listeners.IOnSizeDeterminedListener.OnSizeReady(System.Int32)">
+             <summary>
+             Called when the size of the BottomBar is determined and ready.
+             </summary>
+             <param name="size">height or width of the BottomBar, depending on if the current device is a phone or a tablet.</param>
+            </member>
+        <member name="M:BottomNavigationBar.Listeners.IOnMenuTabClickListener.OnMenuTabSelected(System.Int32)">
+             <summary>
+             The method being called when currently visible <see cref="T:BottomNavigationBar.BottomBarTab" /> changes.
+             This listener is fired for the first time after the items have been set and
+             also after a configuration change, such as when screen orientation changes
+             from portrait to landscape.
+             </summary>
+             <param name="menuItemId">the new visible tab's id that was assigned in the menu xml resource file.</param>
+            </member>
+        <member name="M:BottomNavigationBar.Listeners.IOnMenuTabClickListener.OnMenuTabReSelected(System.Int32)">
+             <summary>
+             The method being called when currently visible <see cref="T:BottomNavigationBar.BottomBarTab" /> is
+             reselected. Use this method for scrolling to the top of your content,
+             as recommended by the Material Design spec
+             </summary>
+             <param name="menuItemId">the reselected tab's id that was assigned in the menu xml resource file.</param>
+            </member>
+        <member name="M:BottomNavigationBar.Listeners.IOnTabClickListener.OnTabSelected(System.Int32)">
+             <summary>
+             The method being called when currently visible <see cref="T:BottomNavigationBar.BottomBarTab" /> changes.
+             This listener is fired for the first time after the items have been set and
+             also after a configuration change, such as when screen orientation changes
+             from portrait to landscape.
+             </summary>
+             <param name="position">position the new visible <see cref="T:BottomNavigationBar.BottomBarTab" /></param>
+            </member>
+        <member name="M:BottomNavigationBar.Listeners.IOnTabClickListener.OnTabReSelected(System.Int32)">
+             <summary>
+             The method being called when currently visible <see cref="T:BottomNavigationBar.BottomBarTab" /> is
+             reselected. Use this method for scrolling to the top of your content,
+             as recommended by the Material Design spec
+             </summary>
+             <param name="position">osition the <see cref="T:BottomNavigationBar.BottomBarTab" /> that was reselected.</param>
+            </member>
+    </members>
+</doc>

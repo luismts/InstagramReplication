@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InstagramReplication.Pages.ProfilePage"
+             xmlns:views="clr-namespace:InstagramReplication.Views"
+             xmlns:controls="clr-namespace:InstagramReplication.Controls;assembly=InstagramReplication"
+             Icon="ic_action_user.png"
+             BindingContext="{Binding Profile, Source={StaticResource Locator}}">
+
+  <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Style x:Key="InfLabel" TargetType="Label">
+                <Setter Property="FontSize"
+                        Value="16"></Setter>
+                <Setter Property="TextColor"
+                        Value="Black"></Setter>
+                <Setter Property="HorizontalTextAlignment"
+                        Value="Center"></Setter>
+                <Setter Property="FontAttributes"
+                        Value="Bold"></Setter>
+                <Setter Property="VerticalOptions"
+                        Value="End"></Setter>
+                <Setter Property="Margin"
+                        Value="0,0,0,-5"></Setter>
+            </Style>
+          
+          <Style x:Key="SecundaryInfLabel" TargetType="Label">
+                <Setter Property="FontSize"
+                        Value="14"></Setter>
+                <Setter Property="TextColor"
+                        Value="Gray"></Setter>
+                <Setter Property="HorizontalTextAlignment"
+                        Value="Center"></Setter>
+                <Setter Property="LineBreakMode"
+                        Value="TailTruncation"></Setter>
+            </Style>
+
+        </ResourceDictionary>
+  </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout Padding="10,0,10,0" BackgroundColor="White">
+
+            <!--Navigation bar-->
+            <StackLayout Orientation = "Horizontal"  Padding="20,10,10,10" Margin="-10,0,-10,0" HeightRequest="29"
+                   BackgroundColor="{StaticResource BBackgroundColor}"  HorizontalOptions="FillAndExpand"  >
+
+                <!--user name-->
+                <Label Text="{Binding InstagramProfile.UserName}" TextColor="Black" FontAttributes="Bold" FontSize="18"/>
+                <!--add user-->
+                <Image Source="add_user.png"  WidthRequest="25" HeightRequest="25"
+                       VerticalOptions="Center" HorizontalOptions="EndAndExpand" Margin="0,0,10,0">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding GoToCommand}" CommandParameter="DescribesPeoplePage"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+                <!--menu-->
+                <Image Source="menu.png"  WidthRequest="15" HeightRequest="15"
+                       VerticalOptions="Center" HorizontalOptions="End">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding GoToCommand}" CommandParameter="OptionsPage"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+
+            </StackLayout>
+
+            <!--Info profile-->
+            <Grid Margin="10,5,10,10"  RowSpacing="5" ColumnSpacing="10" BackgroundColor="White" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25"></RowDefinition>
+                    <RowDefinition Height="20"></RowDefinition>
+                    <RowDefinition Height="35"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <!--image profile-->
+                <Image Source="{Binding InstagramProfile.ProfilePicture}" WidthRequest="50" HeightRequest="50"
+                           VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+                           Grid.Column="0" Grid.Row="0" Grid.RowSpan="3"/>
+
+                <!--post-->
+                <Label Text="00" Style="{StaticResource InfLabel}" Grid.Column="1" Grid.Row="0"/>
+                <Label Text="publications" Style="{StaticResource SecundaryInfLabel}" Grid.Column="1" Grid.Row="1"/>
+
+                <!--followers-->
+                <Label Text="0000" Style="{StaticResource InfLabel}" Grid.Column="2" Grid.Row="0"/>
+                <Label Text="followers" Style="{StaticResource SecundaryInfLabel}"  Grid.Column="2" Grid.Row="1"/>
+
+                <!--followed-->
+                <Label Text="000" Style="{StaticResource InfLabel}" Grid.Column="3" Grid.Row="0"/>
+                <Label Text="followed" Style="{StaticResource SecundaryInfLabel}" Grid.Column="3" Grid.Row="1"/>
+
+                <!--edit profile-->
+                <Button Text="EDIT YOUR PROFILE" BackgroundColor="#efefef" 
+                            TextColor="Black" HorizontalOptions="FillAndExpand" 
+                            Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3" />
+
+
+            </Grid>
+
+            <!--info-->
+            <Label Text="{Binding InstagramProfile.FullName}" Style="{StaticResource InfLabel}" HorizontalOptions="Start" />
+            <Label Text="description" TextColor="Black" FontSize="16" HorizontalOptions="Start" />
+
+            <!--posted-->
+            <Grid Margin="0,20,0,0" RowSpacing="2" ColumnSpacing="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <!--icon grid-->
+                <controls:TintedImage x:Name="iconGrid" Source="grid_view.png" TintColor="Blue" 
+                                      WidthRequest="18" HeightRequest="18"  HorizontalOptions="CenterAndExpand">
+                    <controls:TintedImage.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ShowGridMode"></TapGestureRecognizer>
+                    </controls:TintedImage.GestureRecognizers>
+                </controls:TintedImage>
+
+                <!--icon list-->
+                <controls:TintedImage x:Name="iconList" Source="list_view.png" TintColor="Gray" 
+                                      WidthRequest="20" HeightRequest="20" HorizontalOptions="CenterAndExpand" Grid.Column="1" >
+                    <controls:TintedImage.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ShowListMode"></TapGestureRecognizer>
+                    </controls:TintedImage.GestureRecognizers>
+                </controls:TintedImage>
+
+                <!--icon tagged-->
+                <Image Source="tagged.png"    WidthRequest="20" HeightRequest="20" HorizontalOptions="CenterAndExpand" Grid.Column="2">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding GoToCommand}" CommandParameter="PhotosAppearPage"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+
+            </Grid>
+
+            <!--views-->
+            <views:PhotoGridView x:Name="photoGridView" Margin="-10,0,-10,0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <views:PhotoListView x:Name="photoListView" IsVisible="False" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+
+        </StackLayout>
+    </ContentPage.Content>
+  
+</ContentPage>

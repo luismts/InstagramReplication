@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InstagramReplication.Pages.SearchPage"
+             Icon="ic_action_search.png" BackgroundColor="White">
+
+
+    <StackLayout  BackgroundColor="White" VerticalOptions="FillAndExpand"
+                  HeightRequest="36" Padding="20,10,20,10">
+
+      <!--navigation bar-->
+      <SearchBar x:Name="searchBar" BackgroundColor="{StaticResource BBackgroundColor}"
+                 HeightRequest="50" Margin="-20,-10,-20,0"
+                 Placeholder="Buscar" PlaceholderColor="Gray" 
+                 HorizontalOptions="FillAndExpand" VerticalOptions="Start"  />
+
+      <Label Text="Not available" VerticalOptions="Center" HorizontalOptions="Center" />
+
+    </StackLayout>
+
+
+
+</ContentPage>

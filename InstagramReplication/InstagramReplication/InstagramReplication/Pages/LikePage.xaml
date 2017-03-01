@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:InstagramReplication.Pages;assembly=InstagramReplication"
+             x:Class="InstagramReplication.Pages.LikePage"
+             Icon="ic_action_like.png" BarBackgroundColor="{StaticResource BBackgroundColor}">
+
+  <TabbedPage.Children>
+
+    <pages:TabFollowedLikePage />
+    <pages:TabYourLikePage />
+
+  </TabbedPage.Children>
+  
+</TabbedPage>

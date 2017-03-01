@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InstagramReplication.Pages.PhotosAppearPage"
+             Title="Photos in which you appear">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Hide photos" Order="Secondary"  ></ToolbarItem>
+        <ToolbarItem Text="Labeling options" Order="Secondary"  ></ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <Label Text="Not available" VerticalOptions="Center" HorizontalOptions="Center" />
+
+
+</ContentPage>

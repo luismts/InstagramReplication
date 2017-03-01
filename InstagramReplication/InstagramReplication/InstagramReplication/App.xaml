@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:infra="clr-namespace:InstagramReplication.Infrastructure;assembly=InstagramReplication"
+             x:Class="InstagramReplication.App">
+  <Application.Resources>
+
+    <!-- Application resource dictionary -->
+    <ResourceDictionary>
+      <!--_______________________________________________________________General Colors__________________________________________________________-->
+      <!--bar-->
+      <Color x:Key="BFontColor">#000000</Color>
+      <Color x:Key="BBackgroundColor">#fafafa</Color>
+
+      <Color x:Key="DivitionLineColor">#c8cbcd</Color>
+
+      <!--___________________________________________________________________Locator_____________________________________________________________-->
+      <infra:InstanceLocator x:Key="Locator"></infra:InstanceLocator>
+    </ResourceDictionary>
+
+  </Application.Resources>
+</Application>

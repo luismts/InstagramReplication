@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="InstagramReplication.Views.Test">
+
+    <ContentView.Content>
+        <ScrollView>
+            <!--Posts-->
+            <Grid RowSpacing="1" ColumnSpacing="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <!--1-->
+                <ListView ItemsSource="{Binding InstagramItems1}" HasUnevenRows="True"  SeparatorVisibility="None"  >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="120"></RowDefinition>
+                                    </Grid.RowDefinitions>
+
+                                    <!--IMG-->
+                                    <Image Source = "{Binding StandardResolutionUrl}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <!--2-->
+                <ListView ItemsSource="{Binding InstagramItems2}" HasUnevenRows="True"  SeparatorVisibility="None"  Grid.Column="1">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="120"></RowDefinition>
+                                    </Grid.RowDefinitions>
+
+                                    <!--IMG-->
+                                    <Image Source = "{Binding StandardResolutionUrl}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <!--3-->
+                <ListView ItemsSource="{Binding InstagramItems3}" HasUnevenRows="True"  SeparatorVisibility="None"  Grid.Column="2"> 
+                    
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="120"></RowDefinition>
+                                    </Grid.RowDefinitions>
+
+                                    <!--IMG-->
+                                    <Image Source="{Binding StandardResolutionUrl}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </Grid>
+        </ScrollView>
+
+
+
+    </ContentView.Content>
+</ContentView>
